@@ -1,0 +1,491 @@
+/* Fonts */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v8/ATKpv8nLYAKUYexo8iqqrg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Sans Italic'), local('PTSans-Italic'), url(https://fonts.gstatic.com/s/ptsans/v8/PIPMHY90P7jtyjpXuZ2cLFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/*************************** General *****************************/
+html {
+	background-color: #eee;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.5rem;
+}
+
+body {
+	margin: 0;
+}
+
+.button {
+	background-color: goldenrod;
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #434481;
+	font-weight: 900;
+	line-height: 1.2;
+}
+
+h2 {
+	font-size: 1.8rem;
+	color: #434481;
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.4rem;
+	color: #434481;
+	font-weight: 800;
+	line-height: 1.8;
+}
+
+a {
+	text-decoration: none;
+	color: #434481;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+.site-container {
+	padding-left: 1.6rem;
+}
+
+.main, .site-container {
+	z-index-0;
+}
+
+/**************************** Header *****************************/
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4rem;
+	font-size: 1.2rem;
+	position: fixed;
+	background-color: #ebcb7a;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	border-bottom: 1px solid goldenrod;
+}
+
+.site-header, .site-header.a {
+	font-weight: 900;
+}
+
+.branding ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1.6rem;
+	padding: 0.4rem 1rem 0.4rem 0.5rem;
+}
+
+.branding img {
+	height: 3.5rem;
+	padding-top: .5rem;
+}
+
+.branding li:last-child {
+	color: black;
+	font-weight: 400;
+}
+
+.branding li:nth-child(2) {
+	color: #ae8319;
+	font-weight: 900;
+	margin-right: .20rem;
+}
+
+.nav-desktop ul {
+	display: flex;
+}
+
+.nav-desktop li {
+	padding-right: 1rem;	
+}
+
+.nav-mobile {
+	display: none;
+}
+
+.nav-desktop, .nav-mobile {
+	color: #434481;
+}
+
+/*************************** Banner ******************************/
+.banner {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 4rem;	
+}
+
+.banner-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 20rem;	
+	width: 25rem;
+	padding-left: 5rem;
+	padding-right: 10rem;
+}
+
+#banner-img {
+	width: 60%;
+}
+
+.banner img {
+	max-width: 100%;
+	padding: 2rem 0;
+}
+
+.button-large {
+	padding: 1rem 1rem;
+	width: 12rem;
+	border: 1px solid goldenrod;
+}
+
+.button-large:hover {
+	background-color: #ebcb7a;
+	border: 1px solid #ebcb7a;
+	font-weight: 800;
+}
+
+.mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 760px) {
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+	
+	.nav-desktop, .branding {
+		display: none;
+	}
+	
+	.nav-mobile {
+		display: flex;
+		justify-content: stretch;
+		width: 100%;
+	}
+	
+	.nav-mobile ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 0 4rem;
+	}
+
+	.nav-mobile li {
+	}
+					
+	.banner {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	#banner-img {
+		width: 100%;
+		padding: 0;
+	}
+
+	.banner-content {
+		width: auto;
+		padding: 0 0 0 1rem;
+		margin: 0;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+	}
+	
+	.site-container {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+/****************** On-Campus and Thesis Sections ****************/
+.two-column-container {
+	display: flex;
+	background-color: white;
+}
+
+.two-column-container-left {
+	display: flex;
+	flex-direction: column;
+	max-width: 60%;
+	padding: 2rem 1.5rem 3rem 0;
+	border-right: 1px solid #ccc;
+}
+
+#thesis-left {
+	border-right: none;
+}
+
+.two-column-container-left img,
+#thesis-video video {
+	max-width: 100%;
+	padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 760px) {
+	.site-container {
+		padding: 0;
+	}
+	
+	.two-column-container-left {
+		display: none;
+	}
+}
+
+.two-column-container-right {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+}
+
+.two-column-container-right ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.two-column-container-right li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 1rem;
+}
+
+.campus-details, .thesis-details {
+	display: flex;
+	flex-direction: column;
+	margin-left: 1rem;
+	width: 65%;
+}	
+
+.two-column-container-right li {
+	max-width: 100%;
+}
+
+.campus-img, .thesis-img {
+	padding: 0;
+	width: 35%;
+}
+
+.campus-img img, .thesis-img img {
+	width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+	.two-column-container-right li {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+	}
+	
+	.two-column-container-left {
+		max-width: 100%;
+		padding: 0;
+	}
+	
+	.two-column-container {
+		display: inline;
+	}
+	
+	#thesis-right, #thesis-description {
+		display: none;
+	}
+	
+	#thesis-left {
+		display: flex;
+	}
+	
+	#thesis-video {
+		margin: 0;
+		min-width: 100;
+	}
+	
+	#oncampus-right li:nth-child(3),
+	#oncampus-right li,
+	#thesis-right li {
+		background-color: white;
+		padding: 0;
+	}	
+
+  .two-column-container-right li {	
+		align-items: flex-start;
+	}
+	
+	.campus-img, .thesis-img {
+		width: auto;
+		padding: 1rem 0;
+	}	
+	
+	.two-column-container-right {
+		background-color: white;
+		padding: 0 1rem 2rem 1rem;
+	}
+	
+	.campus-details, .thesis-details {
+		padding-left: 1rem;
+	}		
+}
+
+#oncampus a {
+	color: rgb(0, 100, 150);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+#oncampus-quote h1, p {
+	padding-bottom: 1.5rem;
+}
+
+#oncampus-quote p, h6 {
+	font-family: 'PT Sans';
+  font-style: italic;
+}
+
+#thesis-title {
+	background-color: white;
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+}
+
+/*********************** Online Curriculum **********************/
+#study-areas-title h1 {
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+}
+
+#subjects-desktop {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.subject-box {
+	background-color: white;
+	margin: 1rem;
+	max-width: 25%;
+}
+
+.subject-box img {
+	max-width: 100%;
+}
+
+.subject-box-content {
+	padding: 1rem;
+}
+
+.subject-box-content p {
+	padding: 0.5rem 0 0 0;
+	margin: 0;
+	max-width: 100%;
+}
+
+#subjects-mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 760px) {
+	#subjects-desktop {
+		display: none;
+	}
+	
+	#subjects-mobile {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+	}
+	
+	#subjects-mobile h3 {
+		padding: 1rem;
+		background-color: #ddd;
+		margin: 0.5rem 1rem;
+		color: #555;
+	}
+
+	#study-areas {
+		background-color: white;
+		border-top: 1px solid #ddd;
+	}
+}
+
+.subject-box:hover,
+.two-column-container-right li:hover {
+	background-color: #ebcb7a;
+}
+
+/**************************** Footer *****************************/
+footer {
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	background-color: #ebcb7a;
+	border-top: 2px solid #eee;
+	justify-content: space-between;
+	display: flex;
+}
+
+#footer-right ul {
+	display: flex;
+	flex-direction: row;
+}
+
+#footer-right li {
+	padding-right: 1rem;
+}
+
+@media only screen and (max-width: 760px) {
+	#footer-right {
+		display: none;
+	}
+	
+	footer {
+		align-items: center;
+		border-top: 1px solid #ccc;		
+	}
+	
+	#footer-left {
+		padding: 2.5rem 0 1rem 1rem;
+		padding-top: 2.5rem;
+	}
+}
